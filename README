@@ -1,0 +1,13 @@
+# Defesa das Tecnologias Utilizadas
+
+## Angular (Frontend):
+- **Razões para escolha:** Angular é um framework popular para desenvolvimento de aplicações web e oferece várias vantagens, como arquitetura MVVM (Model-View-ViewModel) que facilita a organização do código, suporte para desenvolvimento rápido de single-page applications (SPAs), recursos avançados de binding de dados e uma ampla gama de bibliotecas e ferramentas adicionais.
+- **Defesa:** Angular oferece uma estrutura robusta e bem testada para desenvolver a interface do usuário do sistema de portabilidade de crédito consignado. Com recursos como componentes reutilizáveis, injeção de dependência e suporte a TypeScript, Angular permite a criação de uma interface de usuário escalável, modular e de fácil manutenção.
+
+## AWS Lambda (Backend):
+- **Razões para escolha:** AWS Lambda é um serviço de computação serverless que permite executar código sem precisar provisionar ou gerenciar servidores. Ele oferece escalabilidade automática, alta disponibilidade e cobrança com base no uso.
+- **Defesa:** AWS Lambda é uma escolha sólida para o backend do sistema de portabilidade de crédito consignado devido à sua escalabilidade automática e modelo de cobrança baseado no uso. Como as funções Lambda são executadas apenas quando acionadas, isso ajuda a reduzir custos operacionais e garante que o sistema possa lidar com picos de carga sem problemas de desempenho.
+
+## AWS CIP (Centralizadora de Serviços da CIP):
+- **Razões para escolha:** A CIP é uma entidade reconhecida no setor financeiro e é responsável pela validação e processamento da portabilidade de crédito consignado no Brasil.
+- **Defesa:** Utilizar a CIP como parte do processo de portabilidade de crédito consignado é uma escolha lógica, pois ela é a entidade autorizada a realizar essas operações. Além disso, integrar o sistema com a CIP permite garantir a conformidade com as regulamentações do setor financeiro e facilita a interoperabilidade com outros sistemas bancários.
