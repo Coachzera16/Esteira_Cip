@@ -1,52 +1,45 @@
-    #Documentação do Sistema de Portabilidade de Crédito Consignado
-#Visão Geral
-Este repositório contém a documentação do sistema de portabilidade de crédito consignado desenvolvido para facilitar a solicitação de portabilidade de crédito de outros bancos para o Itaú Unibanco. O sistema foi construído utilizando Angular para o frontend e AWS Lambda para o backend.
+# Sistema de Portabilidade de Crédito Consignado - Documentação
 
-Arquitetura
+## Objetivo
 
-A arquitetura do sistema é composta por três principais componentes:
+O Sistema de Portabilidade de Crédito Consignado tem como objetivo simplificar e automatizar o processo de solicitação de portabilidade de crédito consignado de outros bancos para o Itaú Unibanco. Esta documentação fornece uma visão geral do sistema, incluindo sua arquitetura, funcionalidades e instruções de uso.
 
-Frontend em Angular:
+## Tecnologias Utilizadas
 
-Interface do usuário acessível através de um navegador web.
-Permite que os usuários solicitem portabilidade de crédito consignado fornecendo informações necessárias.
-Backend AWS Lambda:
+- **Frontend em Angular:** Interface do usuário desenvolvida em Angular para facilitar a interação dos usuários.
+- **Backend AWS Lambda:** Funções Lambda na AWS para processar as solicitações de portabilidade.
+- **AWS CIP (Centralizadora de Serviços da CIP):** Serviço externo responsável pela validação e processamento da portabilidade de crédito consignado.
 
-Responsável pelo processamento das solicitações de portabilidade.
-Composto por várias funções Lambda que realizam etapas específicas do processo, como validação, comunicação com a CIP e processamento de respostas.
-AWS CIP (Centralizadora de Serviços da CIP):
+## Funcionalidades
 
-Entidade externa responsável pela validação e processamento da portabilidade de crédito consignado.
-O backend AWS Lambda se comunica com a CIP enviando e recebendo arquivos XML conforme necessário.
-Funcionamento
-Solicitação de Portabilidade:
+O Sistema de Portabilidade de Crédito Consignado oferece as seguintes funcionalidades:
 
-O usuário acessa a interface do sistema através do frontend em Angular.
-Ele preenche um formulário com informações necessárias para a solicitação de portabilidade, como dados pessoais e detalhes do contrato atual.
-Após enviar o formulário, o frontend envia os dados da solicitação para o backend AWS Lambda por meio de chamadas HTTP.
-Processamento da Solicitação:
+1. **Solicitação de Portabilidade:** Os usuários podem solicitar a portabilidade de crédito consignado fornecendo as informações necessárias, como dados pessoais e detalhes do contrato atual.
+2. **Processamento da Solicitação:** O sistema processa a solicitação, incluindo validação dos dados, comunicação com a CIP e processamento da resposta.
+3. **Feedback ao Usuário:** Os usuários recebem feedback sobre o status da solicitação, incluindo confirmação de envio, aprovação da portabilidade ou retenção pelo banco detentor do contrato.
 
-O backend AWS Lambda recebe a solicitação e realiza uma série de etapas, incluindo validação dos dados, comunicação com a CIP e processamento da resposta.
-Cada etapa é realizada por uma função Lambda específica, garantindo uma separação clara de responsabilidades e facilitando a manutenção do sistema.
-Comunicação com a CIP:
+## Configuração e Implantação
 
-Durante o processo de portabilidade, o backend AWS Lambda se comunica com a CIP enviando e recebendo arquivos XML conforme necessário para a validação e processamento da portabilidade.
-Configuração e Implantação
-Frontend Angular:
+Para configurar e implantar o Sistema de Portabilidade de Crédito Consignado, siga estas etapas:
 
-Clone este repositório e navegue até o diretório do frontend.
-Instale as dependências utilizando o comando npm install.
-Execute o aplicativo localmente usando o comando ng serve.
-Para implantação em produção, compile o aplicativo usando o comando ng build --prod e hospede os arquivos estáticos em um serviço de hospedagem, como AWS S3 ou AWS Amplify.
-Backend AWS Lambda:
+### Frontend Angular:
 
-As funções Lambda estão localizadas no diretório lambda_functions.
-Cada função deve ser implantada individualmente na AWS Lambda usando o console da AWS ou ferramentas de automação como AWS SAM (Serverless Application Model).
-Contribuição
+1. Clone este repositório e navegue até o diretório do frontend.
+2. Instale as dependências utilizando o comando `npm install`.
+3. Execute o aplicativo localmente usando o comando `ng serve`.
+4. Para implantação em produção, compile o aplicativo usando o comando `ng build --prod` e hospede os arquivos estáticos em um serviço de hospedagem, como AWS S3 ou AWS Amplify.
+
+### Backend AWS Lambda:
+
+1. As funções Lambda estão localizadas no diretório `lambda_functions`.
+2. Cada função deve ser implantada individualmente na AWS Lambda usando o console da AWS ou ferramentas de automação como AWS SAM (Serverless Application Model).
+
+## Contribuição
+
 Se você deseja contribuir para este projeto, siga estas etapas:
 
-Faça um fork do repositório.
-Crie uma branch para sua feature (git checkout -b feature/MinhaFeature).
-Faça commit das suas alterações (git commit -am 'Adicionando uma nova feature').
-Faça push para a branch (git push origin feature/MinhaFeature).
-Crie um novo Pull Request.
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`).
+3. Faça commit das suas alterações (`git commit -am 'Adicionando uma nova feature'`).
+4. Faça push para a branch (`git push origin feature/MinhaFeature`).
+5. Crie um novo Pull Request.
